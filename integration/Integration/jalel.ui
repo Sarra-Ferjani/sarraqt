@@ -1,0 +1,3584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>jalel</class>
+ <widget class="QDialog" name="jalel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1003</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>1301</width>
+     <height>681</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;class&gt;MainWindow&lt;/class&gt;
+ &lt;widget class=&quot;QMainWindow&quot; name=&quot;MainWindow&quot;&gt;
+  &lt;property name=&quot;geometry&quot;&gt;
+   &lt;rect&gt;
+    &lt;x&gt;0&lt;/x&gt;
+    &lt;y&gt;0&lt;/y&gt;
+    &lt;width&gt;1291&lt;/width&gt;
+    &lt;height&gt;733&lt;/height&gt;
+   &lt;/rect&gt;
+  &lt;/property&gt;
+  &lt;property name=&quot;windowTitle&quot;&gt;
+   &lt;string&gt;MainWindow&lt;/string&gt;
+  &lt;/property&gt;
+  &lt;property name=&quot;styleSheet&quot;&gt;
+   &lt;string notr=&quot;true&quot;&gt;
+
+/*-----QWidget-----*/
+QWidget
+{
+    background-color: #3a3a3a;
+    color: #fff;
+    selection-background-color: #b78620;
+    selection-color: #000;
+
+}
+
+
+/*-----QLabel-----*/
+QLabel
+{
+    background-color: transparent;
+    color: #fff;
+
+}
+
+
+/*-----QMenuBar-----*/
+QMenuBar
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #000;
+    color: #fff;
+
+}
+
+
+QMenuBar::item
+{
+    background-color: transparent;
+
+}
+
+
+QMenuBar::item:selected
+{
+    background-color: rgba(183, 134, 32, 20%);
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+QMenuBar::item:pressed
+{
+    background-color: rgb(183, 134, 32);
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+/*-----QMenu-----*/
+QMenu
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #222;
+    padding: 4px;
+    color: #fff;
+
+}
+
+
+QMenu::item
+{
+    background-color: transparent;
+    padding: 2px 20px 2px 20px;
+
+}
+
+
+QMenu::separator
+{
+    background-color: rgb(183, 134, 32);
+    height: 1px;
+
+}
+
+
+QMenu::item:disabled
+{
+    color: #555;
+    background-color: transparent;
+    padding: 2px 20px 2px 20px;
+
+}
+
+
+QMenu::item:selected
+{
+    background-color: rgba(183, 134, 32, 20%);
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+/*-----QToolBar-----*/
+QToolBar
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(69, 69, 69, 255),stop:1 rgba(58, 58, 58, 255));
+    border-top: none;
+    border-bottom: 1px solid #4f4f4f;
+    border-left: 1px solid #4f4f4f;
+    border-right: 1px solid #4f4f4f;
+
+}
+
+
+QToolBar::separator
+{
+    background-color: #2e2e2e;
+    width: 1px;
+
+}
+
+
+/*-----QToolButton-----*/
+QToolButton
+{
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 1px;
+}
+
+
+QToolButton:hover
+{
+    background-color: rgba(183, 134, 32, 20%);
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+QToolButton:pressed
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #b78620;
+
+}
+
+
+QToolButton:checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #222;
+}
+
+
+/*-----QPushButton-----*/
+QPushButton
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+    color: #ffffff;
+    min-width: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #051a39;
+    padding: 5px;
+
+}
+
+
+QPushButton::flat
+{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+
+}
+
+
+QPushButton::disabled
+{
+    background-color: #404040;
+    color: #656565;
+    border-color: #051a39;
+
+}
+
+
+QPushButton::hover
+{
+    background-color: rgba(183, 134, 32, 20%);
+    border: 1px solid #b78620;
+
+}
+
+
+QPushButton::pressed
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
+    border: 1px solid #b78620;
+
+}
+
+
+QPushButton::checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
+    border: 1px solid #222;
+
+}
+
+
+/*-----QLineEdit-----*/
+QLineEdit
+{
+    background-color: #131313;
+    color : #eee;
+    border: 1px solid #343434;
+    border-radius: 2px;
+    padding: 3px;
+    padding-left: 5px;
+
+}
+
+
+/*-----QPlainTExtEdit-----*/
+QPlainTextEdit
+{
+    background-color: #131313;
+    color : #eee;
+    border: 1px solid #343434;
+    border-radius: 2px;
+    padding: 3px;
+    padding-left: 5px;
+
+}
+
+
+/*-----QTabBar-----*/
+QTabBar::tab
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+    color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #666;
+    border-bottom: none;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+
+QTabWidget::pane
+{
+    background-color: red;
+    border: 1px solid #666;
+    top: 1px;
+
+}
+
+
+QTabBar::tab:last
+{
+    margin-right: 0;
+
+}
+
+
+QTabBar::tab:first:!selected
+{
+    background-color: #0c0c0d;
+    margin-left: 0px;
+
+}
+
+
+QTabBar::tab:!selected
+{
+    color: #b1b1b1;
+    border-bottom-style: solid;
+    background-color: #0c0c0d;
+
+}
+
+
+QTabBar::tab:selected
+{
+    margin-bottom: 0px;
+
+}
+
+
+QTabBar::tab:!selected:hover
+{
+    border-top-color: #b78620;
+
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+    border: 1px solid #000;
+    padding-left: 6px;
+    color: #ffffff;
+    height: 20px;
+
+}
+
+
+QComboBox::disabled
+{
+    background-color: #404040;
+    color: #656565;
+    border-color: #051a39;
+
+}
+
+
+QComboBox:on
+{
+    background-color: #b78620;
+    color: #000;
+
+}
+
+
+QComboBox QAbstractItemView
+{
+    background-color: #383838;
+    color: #ffffff;
+    border: 1px solid black;
+    selection-background-color: #b78620;
+    outline: 0;
+
+}
+
+
+QComboBox::drop-down
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+
+}
+
+
+QComboBox::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 8px;
+    height: 8px;
+}
+
+
+/*-----QSpinBox &amp;amp; QDateTimeEdit-----*/
+QSpinBox,
+QDateTimeEdit
+{
+    background-color: #131313;
+    color : #eee;
+    border: 1px solid #343434;
+    padding: 3px;
+    padding-left: 5px;
+    border-radius : 2px;
+
+}
+
+
+QSpinBox::up-button,
+QDateTimeEdit::up-button
+{
+    border-top-right-radius:2px;
+    background-color: #777777;
+    width: 16px;
+    border-width: 1px;
+
+}
+
+
+QSpinBox::up-button:hover,
+QDateTimeEdit::up-button:hover
+{
+    background-color: #585858;
+
+}
+
+
+QSpinBox::up-button:pressed,
+QDateTimeEdit::up-button:pressed
+{
+    background-color: #252525;
+    width: 16px;
+    border-width: 1px;
+
+}
+
+
+QSpinBox::up-arrow,
+QDateTimeEdit::up-arrow
+{
+    image: url(://arrow-up.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+QSpinBox::down-button,
+QDateTimeEdit::down-button
+{
+    border-bottom-right-radius:2px;
+    background-color: #777777;
+    width: 16px;
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-button:hover,
+QDateTimeEdit::down-button:hover
+{
+    background-color: #585858;
+
+}
+
+
+QSpinBox::down-button:pressed,
+QDateTimeEdit::down-button:pressed
+{
+    background-color: #252525;
+    width: 16px;
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-arrow,
+QDateTimeEdit::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+/*-----QGroupBox-----*/
+QGroupBox
+{
+    border: 1px solid;
+    border-color: #666666;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+
+QGroupBox::title
+{
+    background-color: transparent;
+    color: #eee;
+    subcontrol-origin: margin;
+    padding: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+
+
+/*-----QHeaderView-----*/
+QHeaderView::section
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #000;
+    color: #fff;
+    text-align: left;
+    padding: 4px;
+
+}
+
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+
+QHeaderView::section:checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+    color: #fff;
+
+}
+
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QTableCornerButton::section
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #000;
+    color: #fff;
+
+}
+
+
+/*-----QTreeWidget-----*/
+QTreeView
+{
+    show-decoration-selected: 1;
+    alternate-background-color: #3a3a3a;
+    selection-color: #fff;
+    background-color: #2d2d2d;
+    border: 1px solid gray;
+    padding-top : 5px;
+    color: #fff;
+    font: 8pt;
+
+}
+
+
+QTreeView::item:selected
+{
+    color:#fff;
+    background-color: #b78620;
+    border-radius: 0px;
+
+}
+
+
+QTreeView::item:!selected:hover
+{
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings
+{
+    image: url(://tree-closed.png);
+
+}
+
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings
+{
+    image: url(://tree-open.png);
+
+}
+
+
+/*-----QListView-----*/
+QListView
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
+    border : none;
+    color: white;
+    show-decoration-selected: 1;
+    outline: 0;
+    border: 1px solid gray;
+
+}
+
+
+QListView::disabled
+{
+    background-color: #656565;
+    color: #1b1b1b;
+    border: 1px solid #656565;
+
+}
+
+
+QListView::item
+{
+    background-color: #2d2d2d;
+    padding: 1px;
+
+}
+
+
+QListView::item:alternate
+{
+    background-color: #3a3a3a;
+
+}
+
+
+QListView::item:selected
+{
+    background-color: #b78620;
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+QListView::item:selected:!active
+{
+    background-color: #b78620;
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+QListView::item:selected:active
+{
+    background-color: #b78620;
+    border: 1px solid #b78620;
+    color: #fff;
+
+}
+
+
+QListView::item:hover {
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox
+{
+    background-color: transparent;
+    color: lightgray;
+    border: none;
+
+}
+
+
+QCheckBox::indicator
+{
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&amp;quot;./ressources/check.png&amp;quot;);
+    background-color: #b78620;
+    border: 1px solid #3a546e;
+
+}
+
+
+QCheckBox::indicator:unchecked:hover
+{
+    border: 1px solid #b78620;
+
+}
+
+
+QCheckBox::disabled
+{
+    color: #656565;
+
+}
+
+
+QCheckBox::indicator:disabled
+{
+    background-color: #656565;
+    color: #656565;
+    border: 1px solid #656565;
+
+}
+
+
+/*-----QRadioButton-----*/
+QRadioButton
+{
+    color: lightgray;
+    background-color: transparent;
+
+}
+
+
+QRadioButton::indicator::unchecked:hover
+{
+    background-color: lightgray;
+    border: 2px solid #b78620;
+    border-radius: 6px;
+}
+
+
+QRadioButton::indicator::checked
+{
+    border: 2px solid #b78620;
+    border-radius: 6px;
+    background-color: rgba(183,134,32,20%);
+    width: 9px;
+    height: 9px;
+
+}
+
+
+/*-----QSlider-----*/
+QSlider::groove:horizontal
+{
+    background-color: transparent;
+    height: 3px;
+
+}
+
+
+QSlider::sub-page:horizontal
+{
+    background-color: #b78620;
+
+}
+
+
+QSlider::add-page:horizontal
+{
+    background-color: #131313;
+
+}
+
+
+QSlider::handle:horizontal
+{
+    background-color: #b78620;
+    width: 14px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    border-radius: 6px;
+
+}
+
+
+QSlider::handle:horizontal:hover
+{
+    background-color: #d89e25;
+    border-radius: 6px;
+
+}
+
+
+QSlider::sub-page:horizontal:disabled
+{
+    background-color: #bbb;
+    border-color: #999;
+
+}
+
+
+QSlider::add-page:horizontal:disabled
+{
+    background-color: #eee;
+    border-color: #999;
+
+}
+
+
+QSlider::handle:horizontal:disabled
+{
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+
+}
+
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal
+{
+    border: 1px solid #222222;
+    background-color: #3d3d3d;
+    height: 15px;
+    margin: 0px 16px 0 16px;
+
+}
+
+
+QScrollBar::handle:horizontal
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+    border: 1px solid #2d2d2d;
+    min-height: 20px;
+
+}
+
+
+QScrollBar::add-line:horizontal
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+    border: 1px solid #2d2d2d;
+    width: 15px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::sub-line:horizontal
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+    border: 1px solid #2d2d2d;
+    width: 15px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::right-arrow:horizontal
+{
+    image: url(://arrow-right.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::left-arrow:horizontal
+{
+    image: url(://arrow-left.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+    background: none;
+
+}
+
+
+QScrollBar:vertical
+{
+    background-color: #3d3d3d;
+    width: 16px;
+    border: 1px solid #2d2d2d;
+    margin: 16px 0px 16px 0px;
+
+}
+
+
+QScrollBar::handle:vertical
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+    border: 1px solid #2d2d2d;
+    min-height: 20px;
+
+}
+
+
+QScrollBar::add-line:vertical
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+    border: 1px solid #2d2d2d;
+    height: 15px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::sub-line:vertical
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+    border: 1px solid #2d2d2d;
+    height: 15px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::up-arrow:vertical
+{
+    image: url(://arrow-up.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::down-arrow:vertical
+{
+    image: url(://arrow-down.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+    background: none;
+
+}
+
+
+/*-----QProgressBar-----*/
+QProgressBar
+{
+    border: 1px solid #666666;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+
+}
+
+
+QProgressBar::chunk
+{
+    background-color: #b78620;
+    width: 30px;
+    margin: 0.5px;
+
+}
+
+&lt;/string&gt;
+  &lt;/property&gt;
+  &lt;widget class=&quot;QWidget&quot; name=&quot;centralwidget&quot;&gt;
+   &lt;widget class=&quot;QTabWidget&quot; name=&quot;tabWidget&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+     &lt;rect&gt;
+      &lt;x&gt;20&lt;/x&gt;
+      &lt;y&gt;20&lt;/y&gt;
+      &lt;width&gt;1151&lt;/width&gt;
+      &lt;height&gt;641&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;tabShape&quot;&gt;
+     &lt;enum&gt;QTabWidget::Triangular&lt;/enum&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;currentIndex&quot;&gt;
+     &lt;number&gt;0&lt;/number&gt;
+    &lt;/property&gt;
+    &lt;widget class=&quot;QWidget&quot; name=&quot;Tarif&quot;&gt;
+     &lt;attribute name=&quot;title&quot;&gt;
+      &lt;string&gt;Films&lt;/string&gt;
+     &lt;/attribute&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditCT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;100&lt;/x&gt;
+        &lt;y&gt;60&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;CODE_TARIF&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;15&lt;/x&gt;
+        &lt;y&gt;60&lt;/y&gt;
+        &lt;width&gt;81&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(255, 255, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;CODE_TARIF&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;Catg&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;15&lt;/x&gt;
+        &lt;y&gt;170&lt;/y&gt;
+        &lt;width&gt;91&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;SOMME_TARIF&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;DATE_TARIF&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;10&lt;/x&gt;
+        &lt;y&gt;110&lt;/y&gt;
+        &lt;width&gt;91&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;DATE_TARIF&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonValidTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;90&lt;/x&gt;
+        &lt;y&gt;240&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Valider&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;RechT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;790&lt;/x&gt;
+        &lt;y&gt;40&lt;/y&gt;
+        &lt;width&gt;191&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Rechercher un Tarif&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonModifTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;530&lt;/x&gt;
+        &lt;y&gt;50&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Modifier&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonSuppTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;190&lt;/x&gt;
+        &lt;y&gt;500&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Supprimer&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditRechTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;800&lt;/x&gt;
+        &lt;y&gt;70&lt;/y&gt;
+        &lt;width&gt;171&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditSMAjout&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;120&lt;/x&gt;
+        &lt;y&gt;170&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QTableView&quot; name=&quot;tableView&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;360&lt;/x&gt;
+        &lt;y&gt;400&lt;/y&gt;
+        &lt;width&gt;671&lt;/width&gt;
+        &lt;height&gt;191&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;ListeT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;390&lt;/x&gt;
+        &lt;y&gt;350&lt;/y&gt;
+        &lt;width&gt;201&lt;/width&gt;
+        &lt;height&gt;31&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Liste des Tarifs :&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditSuppTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;50&lt;/x&gt;
+        &lt;y&gt;500&lt;/y&gt;
+        &lt;width&gt;131&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;SuppFilm&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;20&lt;/x&gt;
+        &lt;y&gt;430&lt;/y&gt;
+        &lt;width&gt;191&lt;/width&gt;
+        &lt;height&gt;31&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;* Suppression :&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QComboBox&quot; name=&quot;comboBox_ModifTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;422&lt;/x&gt;
+        &lt;y&gt;50&lt;/y&gt;
+        &lt;width&gt;101&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;ModifT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;440&lt;/x&gt;
+        &lt;y&gt;15&lt;/y&gt;
+        &lt;width&gt;171&lt;/width&gt;
+        &lt;height&gt;21&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(255, 255, 0);
+color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;* Modification&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditNvCodeT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;530&lt;/x&gt;
+        &lt;y&gt;100&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditNvSommeT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;540&lt;/x&gt;
+        &lt;y&gt;150&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;NvDate&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;430&lt;/x&gt;
+        &lt;y&gt;100&lt;/y&gt;
+        &lt;width&gt;91&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Nouveau Code&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;NvSommeT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;430&lt;/x&gt;
+        &lt;y&gt;150&lt;/y&gt;
+        &lt;width&gt;111&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Nouvelle Somme&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonRechTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;880&lt;/x&gt;
+        &lt;y&gt;100&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Rechercher&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonTriAscTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;940&lt;/x&gt;
+        &lt;y&gt;360&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Trier (asc)&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;AjouT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;70&lt;/x&gt;
+        &lt;y&gt;20&lt;/y&gt;
+        &lt;width&gt;91&lt;/width&gt;
+        &lt;height&gt;31&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;weight&gt;50&lt;/weight&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+        &lt;bold&gt;false&lt;/bold&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;* Ajout :&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QDateEdit&quot; name=&quot;dateEdit_2&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;100&lt;/x&gt;
+        &lt;y&gt;110&lt;/y&gt;
+        &lt;width&gt;110&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;CodeSupp&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;40&lt;/x&gt;
+        &lt;y&gt;470&lt;/y&gt;
+        &lt;width&gt;131&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Entrez le code de Tarif&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonStattarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;990&lt;/x&gt;
+        &lt;y&gt;230&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;stat&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;StatT&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;820&lt;/x&gt;
+        &lt;y&gt;230&lt;/y&gt;
+        &lt;width&gt;171&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Statistiques selon somme&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonTriDescTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;840&lt;/x&gt;
+        &lt;y&gt;360&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Trier (desc)&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;label_Timetarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;1020&lt;/x&gt;
+        &lt;y&gt;10&lt;/y&gt;
+        &lt;width&gt;111&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Segoe UI Semibold&lt;/family&gt;
+        &lt;pointsize&gt;10&lt;/pointsize&gt;
+        &lt;weight&gt;75&lt;/weight&gt;
+        &lt;bold&gt;true&lt;/bold&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string/&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonCamTarif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;990&lt;/x&gt;
+        &lt;y&gt;270&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Camera&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+    &lt;/widget&gt;
+    &lt;widget class=&quot;QWidget&quot; name=&quot;Livreur&quot;&gt;
+     &lt;attribute name=&quot;title&quot;&gt;
+      &lt;string&gt;Clients&lt;/string&gt;
+     &lt;/attribute&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditIDL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;100&lt;/x&gt;
+        &lt;y&gt;80&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string/&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;ID_LIVREUR&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;10&lt;/x&gt;
+        &lt;y&gt;80&lt;/y&gt;
+        &lt;width&gt;71&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;ID_LIVREUR&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;NOM_LIVREUR&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;10&lt;/x&gt;
+        &lt;y&gt;130&lt;/y&gt;
+        &lt;width&gt;91&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;NOM_LIVREUR&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;PRENOM_LIVREUR&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;10&lt;/x&gt;
+        &lt;y&gt;180&lt;/y&gt;
+        &lt;width&gt;111&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;PRENOM_LIVREUR&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;TEL_LIVREUR&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;10&lt;/x&gt;
+        &lt;y&gt;240&lt;/y&gt;
+        &lt;width&gt;81&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;TEL_LIVREUR&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditNomL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;100&lt;/x&gt;
+        &lt;y&gt;130&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditTelL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;100&lt;/x&gt;
+        &lt;y&gt;240&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonValidL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;80&lt;/x&gt;
+        &lt;y&gt;300&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Valider&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonSuppL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;200&lt;/x&gt;
+        &lt;y&gt;520&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Supprimer&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonModifL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;580&lt;/x&gt;
+        &lt;y&gt;60&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Modifier&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QTableView&quot; name=&quot;tableView_2&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;370&lt;/x&gt;
+        &lt;y&gt;400&lt;/y&gt;
+        &lt;width&gt;641&lt;/width&gt;
+        &lt;height&gt;192&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QComboBox&quot; name=&quot;comboBoxModifL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;470&lt;/x&gt;
+        &lt;y&gt;60&lt;/y&gt;
+        &lt;width&gt;101&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;AjoutL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;70&lt;/x&gt;
+        &lt;y&gt;20&lt;/y&gt;
+        &lt;width&gt;91&lt;/width&gt;
+        &lt;height&gt;31&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;weight&gt;50&lt;/weight&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+        &lt;bold&gt;false&lt;/bold&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;* Ajout :&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;label_7&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;480&lt;/x&gt;
+        &lt;y&gt;20&lt;/y&gt;
+        &lt;width&gt;171&lt;/width&gt;
+        &lt;height&gt;21&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;* Modification&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;SuppL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;40&lt;/x&gt;
+        &lt;y&gt;440&lt;/y&gt;
+        &lt;width&gt;191&lt;/width&gt;
+        &lt;height&gt;31&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;* Suppression :&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditSuppL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;70&lt;/x&gt;
+        &lt;y&gt;520&lt;/y&gt;
+        &lt;width&gt;121&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;ListeL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;410&lt;/x&gt;
+        &lt;y&gt;350&lt;/y&gt;
+        &lt;width&gt;201&lt;/width&gt;
+        &lt;height&gt;31&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Arial&lt;/family&gt;
+        &lt;pointsize&gt;16&lt;/pointsize&gt;
+        &lt;italic&gt;true&lt;/italic&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;liste des livreurs:&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditModiftelephone&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;560&lt;/x&gt;
+        &lt;y&gt;100&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonAscL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;910&lt;/x&gt;
+        &lt;y&gt;360&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Trier (asc)&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditRechL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;830&lt;/x&gt;
+        &lt;y&gt;100&lt;/y&gt;
+        &lt;width&gt;161&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string/&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;RechL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;790&lt;/x&gt;
+        &lt;y&gt;70&lt;/y&gt;
+        &lt;width&gt;191&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Rechercher un livreur&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonRechL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;900&lt;/x&gt;
+        &lt;y&gt;130&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Rechercher&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;telephoneModif&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;480&lt;/x&gt;
+        &lt;y&gt;100&lt;/y&gt;
+        &lt;width&gt;81&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Telephone&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLineEdit&quot; name=&quot;lineEditPrenomL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;130&lt;/x&gt;
+        &lt;y&gt;180&lt;/y&gt;
+        &lt;width&gt;113&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QComboBox&quot; name=&quot;comboBoxRechL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;930&lt;/x&gt;
+        &lt;y&gt;70&lt;/y&gt;
+        &lt;width&gt;111&lt;/width&gt;
+        &lt;height&gt;22&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 255);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;item&gt;
+       &lt;property name=&quot;text&quot;&gt;
+        &lt;string&gt;ID&lt;/string&gt;
+       &lt;/property&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+       &lt;property name=&quot;text&quot;&gt;
+        &lt;string&gt;NOM&lt;/string&gt;
+       &lt;/property&gt;
+      &lt;/item&gt;
+      &lt;item&gt;
+       &lt;property name=&quot;text&quot;&gt;
+        &lt;string&gt;PRENOM&lt;/string&gt;
+       &lt;/property&gt;
+      &lt;/item&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;IDLSupp&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;30&lt;/x&gt;
+        &lt;y&gt;490&lt;/y&gt;
+        &lt;width&gt;221&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Entrez l'identifiant de livreur&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonStatL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;930&lt;/x&gt;
+        &lt;y&gt;240&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;stat&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;statL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;830&lt;/x&gt;
+        &lt;y&gt;240&lt;/y&gt;
+        &lt;width&gt;71&lt;/width&gt;
+        &lt;height&gt;20&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Statistiques &lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonTriDescL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;810&lt;/x&gt;
+        &lt;y&gt;360&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;Trier (desc)&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QLabel&quot; name=&quot;label_TimeClient&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;1020&lt;/x&gt;
+        &lt;y&gt;20&lt;/y&gt;
+        &lt;width&gt;101&lt;/width&gt;
+        &lt;height&gt;16&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;font&quot;&gt;
+       &lt;font&gt;
+        &lt;family&gt;Segoe UI Semibold&lt;/family&gt;
+        &lt;pointsize&gt;10&lt;/pointsize&gt;
+        &lt;weight&gt;75&lt;/weight&gt;
+        &lt;bold&gt;true&lt;/bold&gt;
+       &lt;/font&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string/&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+     &lt;widget class=&quot;QPushButton&quot; name=&quot;pushButtonCamL&quot;&gt;
+      &lt;property name=&quot;geometry&quot;&gt;
+       &lt;rect&gt;
+        &lt;x&gt;930&lt;/x&gt;
+        &lt;y&gt;280&lt;/y&gt;
+        &lt;width&gt;93&lt;/width&gt;
+        &lt;height&gt;28&lt;/height&gt;
+       &lt;/rect&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;styleSheet&quot;&gt;
+       &lt;string notr=&quot;true&quot;&gt;background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);&lt;/string&gt;
+      &lt;/property&gt;
+      &lt;property name=&quot;text&quot;&gt;
+       &lt;string&gt;camera&lt;/string&gt;
+      &lt;/property&gt;
+     &lt;/widget&gt;
+    &lt;/widget&gt;
+   &lt;/widget&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QMenuBar&quot; name=&quot;menubar&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;0&lt;/x&gt;
+     &lt;y&gt;0&lt;/y&gt;
+     &lt;width&gt;1291&lt;/width&gt;
+     &lt;height&gt;28&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+  &lt;widget class=&quot;QStatusBar&quot; name=&quot;statusbar&quot;/&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+ &lt;connections/&gt;
+&lt;/ui&gt;
+</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Triangular</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(58, 58, 58);
+color: rgb(255, 255, 255);
+selection-background-color: #b78620;
+    selection-color: #000;</string>
+    </property>
+    <attribute name="title">
+     <string>Clients</string>
+    </attribute>
+    <widget class="QLabel" name="label_Timetarif">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>10</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Semibold</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="tab2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1151</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Triangular</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Tarif_2">
+      <attribute name="title">
+       <string>Ajouter</string>
+      </attribute>
+      <widget class="QLabel" name="CODE_TARIF_2">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>60</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>ID:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Prenom:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DATE_TARIF_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Nom:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_ajouter">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>300</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Timetarif_2">
+       <property name="geometry">
+        <rect>
+         <x>1020</x>
+         <y>10</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Semibold</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Numéro:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>300</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Commande:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Adresse:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>E-Mail:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_id">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>60</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_nom">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>100</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_prenom">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>140</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_num">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>180</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_email">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>220</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_adresse">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>260</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_commande">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>300</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Consulter">
+      <attribute name="title">
+       <string>Consulter</string>
+      </attribute>
+      <widget class="QLineEdit" name="le_id2">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>30</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ID_LIVREUR_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>ID:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="NOM_LIVREUR_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Nom:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PRENOM_LIVREUR_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>30</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Prénom:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TEL_LIVREUR_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>70</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Numéro:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_nom2">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>70</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_num2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>70</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifier">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>70</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_email2">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>30</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="trieID">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>93</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Trier (asc)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="rechercherclient">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>240</y>
+         <width>121</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="recherche">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>240</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Rechercher</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="telephoneModif_2">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>30</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>E-Mail:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_prenom2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>30</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="statsC">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>220</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>stat</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="statL_2">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>190</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Statistiques </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_TimeClient_2">
+       <property name="geometry">
+        <rect>
+         <x>1020</x>
+         <y>20</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Semibold</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tabetudiant">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>671</width>
+         <height>191</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TEL_LIVREUR_3">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>70</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Adresse:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_adresse2">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>70</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_commande2">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>30</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TEL_LIVREUR_4">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>30</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Commande:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_supprimer">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>180</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditSuppL_2">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>180</y>
+         <width>121</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Excel">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>270</y>
+         <width>93</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Excel</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(58, 58, 58);
+color: rgb(255, 255, 255);
+selection-background-color: #b78620;
+    selection-color: #000;</string>
+    </property>
+    <attribute name="title">
+     <string>Livraisons</string>
+    </attribute>
+    <widget class="QLabel" name="label_TimeClient">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>20</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Semibold</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="tab2_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1281</width>
+       <height>641</height>
+      </rect>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Triangular</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Tarif_3">
+      <attribute name="title">
+       <string>Ajouter</string>
+      </attribute>
+      <widget class="QLabel" name="CODE_TARIF_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Prix:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DATE_TARIF_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>ID:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_ajouter_L">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>190</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Timetarif_4">
+       <property name="geometry">
+        <rect>
+         <x>1020</x>
+         <y>10</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Semibold</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Adresse Livraison:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_prix">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>60</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_idL">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>100</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_adresseL">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>180</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="le_dateL">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>140</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Catg_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Date Livraison:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Consulter_2">
+      <attribute name="title">
+       <string>Consulter</string>
+      </attribute>
+      <widget class="QLineEdit" name="le_prix2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>30</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ID_LIVREUR_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Prix:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="NOM_LIVREUR_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>ID:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PRENOM_LIVREUR_3">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>70</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Adresse Livraison:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_idL2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>70</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifier_L">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>30</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="trieID_L">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>140</y>
+         <width>93</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Trier (asc)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="rechercherliv">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>240</y>
+         <width>121</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="recherche_2">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>240</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Rechercher</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_adresseL2">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>70</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonStatL_3">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>220</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>stat</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="statL_3">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>190</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Statistiques </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_TimeClient_3">
+       <property name="geometry">
+        <rect>
+         <x>1020</x>
+         <y>20</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Semibold</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tabliv">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>671</width>
+         <height>191</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_supprimer_L">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>180</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: blue;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditSuppL_3">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>180</y>
+         <width>121</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="le_dateL2">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>30</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: black;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PRENOM_LIVREUR_4">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>30</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: pink;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+</string>
+       </property>
+       <property name="text">
+        <string>Date Livraison:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Excel_L">
+       <property name="geometry">
+        <rect>
+         <x>1020</x>
+         <y>270</y>
+         <width>93</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Excel</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
